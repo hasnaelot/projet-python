@@ -1,0 +1,86 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <div class="up">
+            <a href="{% url 'home' %}" target="_blank"><img src="{% static 'images/shopping logo.png' %}" class="logo"></a>
+        <a class="titre" href="{% url 'home' %}"><h1>SHOPPING</h1></a>
+        </div>
+        <nav>
+            <div class="ligne">
+                <div class="relative">
+                    <input onload=""
+                      type="search"
+                      class="relative m-0 block w-full rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary"
+                      placeholder="Search"
+                      aria-label="Search"
+                      id="exampleFormControlInput4" />
+                </div>
+                <ul>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="login.html">connexion</a></li>
+                    <li><a href="favoris.html"><img src="{% static 'images/favoris.png' %}"></a></li>
+                    <li><a href="{% url 'cart' %}" ><img class="panier" src="{% static 'images/panier.png' %}"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+            <a href="{% url 'store' %}">Decouvrez tous nos produits !</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Livraison</h3>
+            <p>nous offrons un service livraison a temps record.</p>
+        </div>
+        <div class="feature">
+            <h3>Design</h3>
+            <p>Nous suivons les dernières tendances en matière de design.</p>
+        </div>
+        <div class="feature">
+            <h3>Support 24/7</h3>
+            <p>Notre équipe est toujours là pour répondre à vos questions et demandes.</p>
+        </div>
+    </section> 
+    <div class="icons">
+        <a href="{% url 'store' %}"><img onclick="people(this.src)" src="{% static 'images/femme p1.webp' %}"></a>
+        <a href="{% url 'store' %}"><img onclick="people(this.src)" src="{% static 'images/homme p1.avif' %}"></a>
+        <a href="{% url 'store' %}"><img onclick="people(this.src)" src="{% static 'images/kids p1.jfif' %}"></a>
+        <a href="{% url 'store' %}"><img onclick="people(this.src)" src="{% static 'images/house p1.jfif' %}"></a>
+        <a href="{% url 'store' %}"><img onclick="people(this.src)" src="{% static 'images/pets p1.jfif' %}"></a>
+    </div>
+<script src="people.js"></script>
+<footer>
+    <div class="footer-content">
+        <div class="contact-info">
+            <p>Téléphone : <a href="+212661610505">+212661610505</a></p>
+            <p>Email : <a href="shopping@example.com">shopping@gmail.com</a></p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/shopping" target="_blank">
+                <img src="{% static 'images/insta logo.png' %}" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/shopping" target="_blank">
+                <img src="{% static 'images/faceb logo.png' %}" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com/shopping" target="_blank">
+                <img class="tik" src="{% static 'images/tikt logo.png' %}" alt="tiktok">
+            </a>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>
